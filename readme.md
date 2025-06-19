@@ -15,7 +15,7 @@ A beginner-friendly Flask + HTML/CSS project to track personal spending. Easily 
 
 - ➕ **Add Expense**: Record your purchases with date, category, amount, and description.
   
-- 🔍 **Filter Expenses**: Search your entries by category, or date range.
+- 🔍 **Filter Expenses**: Search your entries by category or date range.
   
 - 📂 **Apply Filter**: Instantly view only the data you need.
   
@@ -23,7 +23,7 @@ A beginner-friendly Flask + HTML/CSS project to track personal spending. Easily 
   
 - 🌓 **Dark & Light Mode**: Stylish day/night themes for any vibe.
   
-- 🎨 **Modern UI/UX**: Elegant fonts, responsive layout, and a chic color palette.
+- 🎨 **Modern UI/UX**: Elegant fonts, responsive layout, and a chic colour palette.
 
 ---
 
@@ -64,6 +64,9 @@ python app.py
 ```
 App will start at http://127.0.0.1:5000
 
+## 📸 UI
+![Screenshot 2025-06-20 002300](https://github.com/user-attachments/assets/502acb9c-9933-41b0-aaf5-1067be356ea2)
+
 ## 🖥️ How It Works
 ### ➕ Add Expense
 Fill out the form and click "Add Expense" — the entry is saved to expenses.csv.
@@ -84,7 +87,5 @@ Each row includes a "Delete" button to remove specific entries.
 
 - 🧠 Designed for educational purposes and simplicity.
 
-## 📷 Screenshot
 
-![Screenshot](https://github.com/user-attachments/assets/99741fc9-07fa-4ad2-9eb6-549a5e38ba31)
 
