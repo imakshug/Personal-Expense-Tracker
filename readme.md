@@ -25,6 +25,7 @@ README.md              # Project documentation
 ---
 
 ## 🖥️ Menu Options
+
 ```bash
 === Personal Expense Tracker ===
 1. Add Expense
@@ -33,3 +34,15 @@ README.md              # Project documentation
 4. Show Total Spending
 5. Monthly Report
 6. Exit
+
+---
+---
+
+## 🚀 How to Run
+
+1. Make sure Python 3 is installed on your system.
+2. Open a terminal in the directory where the files are saved.
+3. Run the app with:
+
+```bash
+python expense_tracker.py
