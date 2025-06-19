@@ -64,10 +64,10 @@ App will start at http://127.0.0.1:5000
 Fill out the form and click "Add Expense" — the entry is saved to expenses.csv.
 
 ### 📋 View Table
-All expenses are shown in a table, updated live via JavaScript and Flask API.
+All expenses are displayed in a table, updated in real-time via a JavaScript and Flask API.
 
 ### 🔍 Filter
-Enter a category, date range, or both — and hit "Apply Filter" to narrow down the results.
+Enter a category, date range, or both, and hit "Apply Filter" to narrow down the results.
 
 ### 🗑️ Delete
 Each row includes a "Delete" button to remove specific entries.
@@ -80,3 +80,6 @@ Each row includes a "Delete" button to remove specific entries.
 - 🧠 Designed for educational purposes and simplicity.
 
 ## 📷 Screenshot
+
+![Screenshot](https://github.com/user-attachments/assets/99741fc9-07fa-4ad2-9eb6-549a5e38ba31)
+
