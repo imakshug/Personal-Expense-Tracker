@@ -50,8 +50,9 @@ def filter_expenses():
         reader = csv.DictReader(f)
         for row in reader:
             if (not category or row['Category'].lower() == category.lower()) and \
-               (not start_date or row['Date'] >= start_date) and \
-               (not end_date or row['Date'] <= end_date):
+            (not start_date or row['Date'] >= start_date) and \
+            (not end_date or row['Date'] <= end_date):
+
                 filtered_expenses.append(row)
 
     return jsonify(filtered_expenses), 200

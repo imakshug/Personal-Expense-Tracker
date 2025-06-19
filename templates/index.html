@@ -26,7 +26,7 @@
     <form id="filterForm">
       <input type="text" id="filterCategory" placeholder="Category" />
       <input type="date" id="filterStart" placeholder="Start Date" />
-      <input type="date" id="filterEnd" placeholder="End Date" />
+      
       <button type="submit">Apply Filter</button>
     </form>
 
@@ -129,14 +129,19 @@
   });
 
   document.getElementById('filterForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const filters = {
-      category: document.getElementById('filterCategory').value,
-      start_date: document.getElementById('filterStart').value,
-      end_date: document.getElementById('filterEnd').value
-    };
-    loadExpenses(filters);
-  });
+  e.preventDefault();
+
+  const filters = {};
+  const category = document.getElementById('filterCategory').value.trim();
+  const startDate = document.getElementById('filterStart').value;
+
+  if (category) filters.category = category;
+  if (startDate) filters.start_date = startDate;
+
+  loadExpenses(filters);
+});
+  // Function to delete an expense
+  // This function sends a request to the server to delete an expense
 
   function deleteExpense(date, category, amount, description) {
     fetch('/delete', {
