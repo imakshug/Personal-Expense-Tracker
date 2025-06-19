@@ -1,49 +1,74 @@
-# 💸 Personal Expense Tracker (CLI)
+# 💸 💸 Personal Expense Tracker (Web App)
 
-A beginner-friendly **Python command-line app** to track your daily expenses, store them in a CSV file, and generate insightful reports. Ideal for learning file handling, input validation, and basic data reporting.
+A beginner-friendly Flask + HTML/CSS project to track personal spending. Easily add, view, filter, and delete your expenses — all stored in a CSV file. Great for learning about:
+
+- Backend (Flask API)
+- Frontend (HTML/CSS + JS)
+- File I/O in Python
+- Fetch API usage
 
 ---
 
 ## ✨ Features
 
-- 📝 **Add Expense** — Input date, category, amount, and description
-- 📃 **View All Expenses**
-- 🔍 **Filter by Category or Date Range**
-- 💰 **Calculate Total Spending**
-- 📆 **Monthly Spending Reports**
-- 💾 **CSV-based Data Storage**
+- ✅ Add new expenses (Date, Category, Amount, Description)
+- 📂 View all expenses in a table
+- 🔍 Filter by category and/or date range
+- 💸 Currency displayed in Rs format
+- 🗑️ Delete any entry from the table
+- 💾 CSV file auto-managed in the backend (expenses.csv)
+
+
 
 ---
 
 ## 📦 Project Files
 
 ```bash
-expense_tracker.py     # Main CLI application
-expenses.csv           # Auto-created log file (if not present)
-README.md              # Project documentation
+├── main.py            
+├── app.py               # Flask backend
+├── expenses.csv         # CSV log file (auto-created)
+├── templates/
+│   └── index.html       # Main HTML frontend
+├── static/
+│   └── style.css        # Custom styles
+└── README.md            # Project documentation
 ```
+
 ---
 
-## 🖥️ Menu Options
+## Getting Started
+
+### 1. Install Dependencies
 
 ```bash
-=== Personal Expense Tracker ===
-1. Add Expense
-2. View All Expenses
-3. Filter Expenses
-4. Show Total Spending
-5. Monthly Report
-6. Exit
+python pip install flask
 ```
----
----
-
-## 🚀 How to Run
-
-1. Make sure Python 3 is installed on your system.
-2. Open a terminal in the directory where the files are saved.
-3. Run the app with:
+### 2. Run the App
 
 ```bash
-python expense_tracker.py
+python app.py
 ```
+App will start at http://127.0.0.1:5000
+
+## 🖥️ How It Works
+### ➕ Add Expense
+Fill out the form and click "Add Expense" — the entry is saved to expenses.csv.
+
+### 📋 View Table
+All expenses are shown in a table, updated live via JavaScript and Flask API.
+
+### 🔍 Filter
+Enter a category, date range, or both — and hit "Apply Filter" to narrow down the results.
+
+### 🗑️ Delete
+Each row includes a "Delete" button to remove specific entries.
+
+## 📌 Notes
+- 💾 Your data is saved in expenses.csv locally.
+
+- 🛑 No authentication — keep this for personal or learning use.
+
+- 🧠 Designed for educational purposes and simplicity.
+
+## 📷 Screenshot

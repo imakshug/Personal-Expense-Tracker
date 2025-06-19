@@ -1,65 +1,136 @@
+/* Reset & Base Styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f6f8;
   margin: 0;
-  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fb;
+  color: #333;
 }
 
 .container {
-  max-width: 800px;
-  margin: auto;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-in-out;
 }
 
+/* Heading */
 h1, h2 {
   text-align: center;
-  color: #2c3e50;
+  color: #2d3436;
+  margin-bottom: 20px;
 }
 
+/* Forms */
 form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
 form input, form button {
-  padding: 0.6rem;
+  padding: 10px 14px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+form input {
+  flex: 1 1 180px;
 }
 
 form button {
-  background-color: #2ecc71;
+  background: #0984e3;
   color: white;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 form button:hover {
-  background-color: #27ae60;
+  background: #74b9ff;
+  transform: scale(1.05);
 }
 
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
+  animation: fadeInUp 0.6s ease;
 }
 
-table thead {
-  background-color: #3498db;
-  color: white;
-}
-
-table th, table td {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+th {
+  background: #dfe6e9;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #f1f2f6;
+}
+
+/* Delete Button */
+td button {
+  background: #d63031;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+td button:hover {
+  background: #ff7675;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form input, form button {
+    width: 100%;
+  }
+
+  table, thead, tbody, th, td, tr {
+    font-size: 14px;
+  }
 }
