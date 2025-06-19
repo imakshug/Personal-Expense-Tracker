@@ -1,136 +1,476 @@
-/* Reset & Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@1,500&family=Sora:wght@500&display=swap');
+
+:root {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* LIGHT THEME */
+body.light {
+  --bg: #fefefe;
+  --text: #1f1f1f;
+  --accent: #6a4c93;
+  --border: #ddd;
+  --input-bg: #fff;
+  --shadow: rgba(106, 76, 147, 0.2);
+}
+
+/* DARK THEME */
+body.dark {
+  --bg: #121212;
+  --text: #eeeeee;
+  --accent: #d3bfff;
+  --border: #444;
+  --input-bg: #1e1e1e;
+  --shadow: rgba(211, 191, 255, 0.2);
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f5f7fb;
-  color: #333;
+  padding: 2rem;
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
 }
 
 .container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  animation: fadeIn 0.8s ease-in-out;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px var(--shadow);
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  transition: all 0.3s ease;
 }
 
-/* Heading */
-h1, h2 {
-  text-align: center;
-  color: #2d3436;
-  margin-bottom: 20px;
-}
-
-/* Forms */
 form {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 25px;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
-form input, form button {
-  padding: 10px 14px;
-  border: 1px solid #ccc;
+input[type="text"],
+input[type="number"],
+input[type="date"],
+button {
+  padding: 0.6rem 0.8rem;
   border-radius: 8px;
-  font-size: 16px;
+  border: 1px solid var(--border);
+  background-color: var(--input-bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+}
+
+input:focus, button:focus {
   outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--shadow);
 }
 
-form input {
-  flex: 1 1 180px;
-}
-
-form button {
-  background: #0984e3;
-  color: white;
-  border: none;
+button {
+  background-color: var(--accent);
+  color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-form button:hover {
-  background: #74b9ff;
-  transform: scale(1.05);
-}
-
-/* Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  animation: fadeInUp 0.6s ease;
-}
-
-th, td {
-  padding: 14px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-th {
-  background: #dfe6e9;
   font-weight: 600;
 }
 
-tr:nth-child(even) {
-  background: #f1f2f6;
+button:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
 }
 
-/* Delete Button */
-td button {
-  background: #d63031;
-  color: white;
+#themeToggle {
+  background: transparent;
   border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
+  font-size: 1.3rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+#themeToggle:hover {
+  transform: rotate(10deg);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: var(--input-bg);
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-style: italic;
+}
+
+th {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+td button {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 td button:hover {
-  background: #ff7675;
-  transform: scale(1.1);
+  background-color: var(--accent);
+  color: var(--bg);
 }
-
-/* Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+td button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--shadow);
 }
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+td button:active {
+  transform: scale(0.98);
 }
-
-/* Responsive */
 @media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
   form {
     flex-direction: column;
-    align-items: stretch;
   }
 
-  form input, form button {
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
     width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg);
+    color: var(--text);
   }
 
-  table, thead, tbody, th, td, tr {
-    font-size: 14px;
+  .container {
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 30px var(--shadow);
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    background-color: var(--input-bg);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  h1, h2 {
+    color: var(--accent);
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  .container {
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 30px var(--shadow);
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    background-color: var(--input-bg);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  h1, h2 {
+    color: var(--accent);
+  }
+}
+@media (max-width: 400px) {
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 300px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 200px) {
+  body {
+    padding: 0.25rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  h1, h2 {
+    font-size: 1.1rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 100px) {
+  body {
+    padding: 0.1rem;
+  }
+
+  .container {
+    padding: 0.25rem;
+  }
+
+  h1, h2 {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.75rem;
+  }
+
+  th, td {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 50px) {
+  body {
+    padding: 0.05rem;
+  }
+
+  .container {
+    padding: 0.1rem;
+  }
+
+  h1, h2 {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.7rem;
+  }
+
+  th, td {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 25px) {
+  body {
+    padding: 0.02rem;
+  }
+
+  .container {
+    padding: 0.05rem;
+  }
+
+  h1, h2 {
+    font-size: 0.8rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.65rem;
+  }
+
+  th, td {
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 10px) {
+  body {
+    padding: 0.01rem;
+  }
+
+  .container {
+    padding: 0.02rem;
+  }
+
+  h1, h2 {
+    font-size: 0.7rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.6rem;
+  }
+
+  th, td {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 5px) {
+  body {
+    padding: 0.005rem;
+  }
+
+  .container {
+    padding: 0.01rem;
+  }
+
+  h1, h2 {
+    font-size: 0.6rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.55rem;
+  }
+
+  th, td {
+    font-size: 0.55rem;
+  }
+}
+@media (max-width: 2px) {
+  body {
+    padding: 0.002rem;
+  }
+
+  .container {
+    padding: 0.005rem;
+  }
+
+  h1, h2 {
+    font-size: 0.5rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.5rem;
+  }
+
+  th, td {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 1px) {
+  body {
+    padding: 0.001rem;
+  }
+
+  .container {
+    padding: 0.002rem;
+  }
+
+  h1, h2 {
+    font-size: 0.4rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.45rem;
+  }
+
+  th, td {
+    font-size: 0.45rem;
+  }
+}
+@media (max-width: 0.5px) {
+  body {
+    padding: 0.0005rem;
+  }
+
+  .container {
+    padding: 0.001rem;
+  }
+
+  h1, h2 {
+    font-size: 0.3rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  button {
+    font-size: 0.4rem;
+  }
+
+  th, td {
+    font-size: 0.4rem;
   }
 }
