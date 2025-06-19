@@ -3,8 +3,11 @@
 A beginner-friendly Flask + HTML/CSS project to track personal spending. Easily add, view, filter, and delete your expenses — all stored in a CSV file. Great for learning about:
 
 - Backend (Flask API)
+  
 - Frontend (HTML/CSS + JS)
+  
 - File I/O in Python
+  
 - Fetch API usage
 
 ---
@@ -12,10 +15,15 @@ A beginner-friendly Flask + HTML/CSS project to track personal spending. Easily 
 ## ✨ Features
 
 - ✅ Add new expenses (Date, Category, Amount, Description)
+  
 - 📂 View all expenses in a table
+  
 - 🔍 Filter by category and/or date range
+  
 - 💸 Currency displayed in Rs format
+  
 - 🗑️ Delete any entry from the table
+  
 - 💾 CSV file auto-managed in the backend (expenses.csv)
 
 
