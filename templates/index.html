@@ -48,6 +48,12 @@
   </div>
 
   <script>
+  let userId = localStorage.getItem('userId');
+  if (!userId) {
+    userId = crypto.randomUUID();
+    localStorage.setItem('userId', userId);
+  }
+
   const toggleButton = document.getElementById('themeToggle');
 
   function setTheme(mode) {

@@ -112,6 +112,9 @@ table {
   border-collapse: collapse;
   margin-top: 1rem;
   background-color: var(--input-bg);
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
 }
 
 th, td {
@@ -119,6 +122,10 @@ th, td {
   text-align: left;
   border-bottom: 1px solid var(--border);
   font-style: italic;
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 12px;
+  font-size: 1rem;
 }
 
 th {
@@ -130,7 +137,8 @@ td button {
   background: transparent;
   border: 1px solid var(--accent);
   color: var(--accent);
-  padding: 0.4rem 0.6rem;
+  padding: 4px 8px;
+  font-size: 0.9rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
@@ -146,6 +154,40 @@ td button:focus {
 }
 td button:active {
   transform: scale(0.98);
+}
+/* Make table scrollable on small screens */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 10px 6px;
+    font-size: 0.9rem;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+/* Better spacing for inputs */
+form input, form button {
+  margin: 5px;
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 @media (max-width: 600px) {
   body {
@@ -239,9 +281,15 @@ td button:active {
     padding: 0.5rem;
   }
 
-  .container {
-    padding: 1rem;
-  }
+  /* Container responsiveness */
+.container {
+  width: 95%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
   h1, h2 {
     font-size: 1.3rem;
@@ -258,219 +306,4 @@ td button:active {
     font-size: 0.85rem;
   }
 }
-@media (max-width: 200px) {
-  body {
-    padding: 0.25rem;
-  }
-
-  .container {
-    padding: 0.5rem;
-  }
-
-  h1, h2 {
-    font-size: 1.1rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.8rem;
-  }
-
-  th, td {
-    font-size: 0.8rem;
-  }
-}
-@media (max-width: 100px) {
-  body {
-    padding: 0.1rem;
-  }
-
-  .container {
-    padding: 0.25rem;
-  }
-
-  h1, h2 {
-    font-size: 1rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.75rem;
-  }
-
-  th, td {
-    font-size: 0.75rem;
-  }
-}
-@media (max-width: 50px) {
-  body {
-    padding: 0.05rem;
-  }
-
-  .container {
-    padding: 0.1rem;
-  }
-
-  h1, h2 {
-    font-size: 0.9rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.7rem;
-  }
-
-  th, td {
-    font-size: 0.7rem;
-  }
-}
-@media (max-width: 25px) {
-  body {
-    padding: 0.02rem;
-  }
-
-  .container {
-    padding: 0.05rem;
-  }
-
-  h1, h2 {
-    font-size: 0.8rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.65rem;
-  }
-
-  th, td {
-    font-size: 0.65rem;
-  }
-}
-@media (max-width: 10px) {
-  body {
-    padding: 0.01rem;
-  }
-
-  .container {
-    padding: 0.02rem;
-  }
-
-  h1, h2 {
-    font-size: 0.7rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.6rem;
-  }
-
-  th, td {
-    font-size: 0.6rem;
-  }
-}
-@media (max-width: 5px) {
-  body {
-    padding: 0.005rem;
-  }
-
-  .container {
-    padding: 0.01rem;
-  }
-
-  h1, h2 {
-    font-size: 0.6rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.55rem;
-  }
-
-  th, td {
-    font-size: 0.55rem;
-  }
-}
-@media (max-width: 2px) {
-  body {
-    padding: 0.002rem;
-  }
-
-  .container {
-    padding: 0.005rem;
-  }
-
-  h1, h2 {
-    font-size: 0.5rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.5rem;
-  }
-
-  th, td {
-    font-size: 0.5rem;
-  }
-}
-@media (max-width: 1px) {
-  body {
-    padding: 0.001rem;
-  }
-
-  .container {
-    padding: 0.002rem;
-  }
-
-  h1, h2 {
-    font-size: 0.4rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.45rem;
-  }
-
-  th, td {
-    font-size: 0.45rem;
-  }
-}
-@media (max-width: 0.5px) {
-  body {
-    padding: 0.0005rem;
-  }
-
-  .container {
-    padding: 0.001rem;
-  }
-
-  h1, h2 {
-    font-size: 0.3rem;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  button {
-    font-size: 0.4rem;
-  }
-
-  th, td {
-    font-size: 0.4rem;
-  }
-}
+ 
