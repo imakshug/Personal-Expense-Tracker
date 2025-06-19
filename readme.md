@@ -33,7 +33,7 @@ A beginner-friendly Flask + HTML/CSS project to track personal spending. Easily 
 ## 📦 Project Files
 
 ```bash
-├── main.py            
+           
 ├── app.py               # Flask backend
 ├── expenses.csv         # CSV log file (auto-created)
 ├── templates/

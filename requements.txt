@@ -1,7 +1,0 @@
-expense_tracker/
-├── app.py
-├── expenses.csv (auto-generated)
-├── static/
-│   └── style.css
-└── templates/
-    └── index.html

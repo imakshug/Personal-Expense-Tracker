@@ -67,7 +67,7 @@
             row.innerHTML = `
               <td>${exp.date || '-'}</td>
               <td>${exp.category || '-'}</td>
-              <td>Rs ${parseFloat(exp.amount || 0).toFixed(2)}</td>
+              <td>₹ ${parseFloat(exp.amount || 0).toFixed(2)}</td>
               <td>${exp.description || '-'}</td>
               <td><button onclick="deleteExpense('${exp.date}', '${exp.category}', '${exp.amount}', '${exp.description}')">Delete</button></td>
             `;
