@@ -65,7 +65,7 @@ python app.py
 App will start at http://127.0.0.1:5000
 
 ## 📸 UI
-![Screenshot 2025-06-20 002300](https://github.com/user-attachments/assets/502acb9c-9933-41b0-aaf5-1067be356ea2)
+<img src="https://github.com/user-attachments/assets/502acb9c-9933-41b0-aaf5-1067be356ea2" alt="App Snapshot" width="600" height="400" />
 
 ## 🖥️ How It Works
 ### ➕ Add Expense
