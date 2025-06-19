@@ -11,48 +11,53 @@ A beginner-friendly Flask + HTML/CSS project to track personal spending. Easily 
 - Fetch API usage
 
 ---
-
 ## ✨ Features
 
-- ✅ Add new expenses (Date, Category, Amount, Description)
+- ➕ **Add Expense**: Record your purchases with date, category, amount, and description.
   
-- 📂 View all expenses in a table
+- 🔍 **Filter Expenses**: Search your entries by category, or date range.
   
-- 🔍 Filter by category and/or date range
+- 📂 **Apply Filter**: Instantly view only the data you need.
   
-- 💸 Currency displayed in Rs format
+- 📋 **All Expenses**: Sorted neatly by date for easy tracking.
   
-- 🗑️ Delete any entry from the table
+- 🌓 **Dark & Light Mode**: Stylish day/night themes for any vibe.
   
-- 💾 CSV file auto-managed in the backend (expenses.csv)
-
-
+- 🎨 **Modern UI/UX**: Elegant fonts, responsive layout, and a chic color palette.
 
 ---
 
-## 📦 Project Files
+## 📦 Project Structure
 
 ```bash
-           
-├── app.py               # Flask backend
-├── expenses.csv         # CSV log file (auto-created)
-├── templates/
-│   └── index.html       # Main HTML frontend
+expense-tracker/
+├── app.py                  # Main Flask app
+├── expenses.csv            # Data storage
+├── requirements.txt        # Dependencies
 ├── static/
-│   └── style.css        # Custom styles
-└── README.md            # Project documentation
+│   └── style.css           # Light/Dark themed CSS
+├── templates/
+│   └── index.html          # Main UI
+└── README.md               # You're reading this :)
 ```
 
 ---
 
 ## Getting Started
 
-### 1. Install Dependencies
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/your-username/expense-tracker.git
+cd expense-tracker
+```
+
+### 2. Install Dependencies
 
 ```bash
 python pip install flask
 ```
-### 2. Run the App
+### 3. Run the App
 
 ```bash
 python app.py
