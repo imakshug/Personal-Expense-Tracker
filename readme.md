@@ -1,4 +1,4 @@
-# 💸 💸 Personal Expense Tracker (Web App)
+# 💸 Personal Expense Tracker (Web App)
 
 A beginner-friendly Flask + HTML/CSS project to track personal spending. Easily add, view, filter, and delete your expenses — all stored in a CSV file. Great for learning about:
 
