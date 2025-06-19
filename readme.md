@@ -21,3 +21,15 @@ A beginner-friendly **Python command-line app** to track your daily expenses, st
 expense_tracker.py     # Main CLI application
 expenses.csv           # Auto-created log file (if not present)
 README.md              # Project documentation
+
+---
+
+## 🖥️ Menu Options
+```bash
+=== Personal Expense Tracker ===
+1. Add Expense
+2. View All Expenses
+3. Filter Expenses
+4. Show Total Spending
+5. Monthly Report
+6. Exit
